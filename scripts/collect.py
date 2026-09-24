@@ -184,7 +184,7 @@ def main():
     captured = []  # (url, json) in arrival order
 
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=False)
+        browser = pw.chromium.launch(headless=False, args=["--remote-debugging-port=9223", "--remote-debugging-address=127.0.0.1"])
         ctx = browser.new_context()
         page = ctx.new_page()
 
