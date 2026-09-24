@@ -3,12 +3,12 @@
     "title": "Airtel Account Dashboard",
     "owner": "Govindarajulu",
     "generatedAt": "2026-09-24T18:00:00+05:30",
-    "source": "Owner-captured Airtel portal pages and responses on 24 September 2026",
+    "source": "Owner-captured Airtel portal pages, scrubbed before publishing",
     "usageStatus": "Web portal currently returns no broadband usage figures. The usage slot is reserved for the old portal when it returns real used/remaining GB."
   },
   "plan": {
     "name": "Airtel Black",
-    "accountId": "10101028725242",
+    "accountId": "10***42",
     "status": "Active",
     "price": "₹611 / month",
     "billMode": "E-bill",
@@ -17,8 +17,8 @@
   "connections": [
     {
       "service": "Wi-Fi / AirFiber",
-      "identifier": "042226899928_wifi",
-      "accountNumber": "20033850986",
+      "identifier": "04***fi",
+      "accountNumber": "20***86",
       "line": "DSL",
       "plan": "₹599 Plan",
       "speed": "30 Mbps",
@@ -27,7 +27,7 @@
     },
     {
       "service": "DTH",
-      "identifier": "3070907513-001",
+      "identifier": "30***01",
       "line": "DTH",
       "usageStatus": "Usage endpoint currently returns no usage figures on web"
     }
@@ -47,18 +47,40 @@
     "generatedOn": "12 Sep 2026",
     "dueDate": "22 Sep 2026",
     "history": [
-      { "month": "Sep 2026", "amount": "₹720.98" },
-      { "month": "Aug 2026", "amount": "₹737.97" },
-      { "month": "Jul 2026", "amount": "₹725.70" },
-      { "month": "Jun 2026", "amount": "₹722.13" }
+      {
+        "month": "Sep 2026",
+        "amount": "₹720.98"
+      },
+      {
+        "month": "Aug 2026",
+        "amount": "₹737.97"
+      },
+      {
+        "month": "Jul 2026",
+        "amount": "₹725.70"
+      },
+      {
+        "month": "Jun 2026",
+        "amount": "₹722.13"
+      }
     ]
   },
   "profile": {
-    "primaryMobile": "9043309052",
-    "emailForEBill": "govindarajulu13597@gmail.com"
+    "primaryMobile": "******9052",
+    "emailForEBill": "govind***@gmail.com"
   },
   "shortcuts": [
-    "View bills", "Pay bills", "Wi-Fi settings", "Manage Netflix", "Modify plan", "Update mobile number", "Shift connection", "E-bill", "Safe custody", "Change email address", "Add-on devices"
+    "View bills",
+    "Pay bills",
+    "Wi-Fi settings",
+    "Manage Netflix",
+    "Modify plan",
+    "Update mobile number",
+    "Shift connection",
+    "E-bill",
+    "Safe custody",
+    "Change email address",
+    "Add-on devices"
   ],
   "fetchLog": [
     {

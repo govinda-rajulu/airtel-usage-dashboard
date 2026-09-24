@@ -1,19 +1,15 @@
 # Airtel Account Dashboard
 
-Static GitHub Pages dashboard aggregating the details Airtel exposes for Govind's account: plan, linked connections, current bill, bill history, receiver details, shortcuts, and a reserved broadband-usage slot.
+Static GitHub Pages dashboard aggregating the details Airtel exposes for this account: plan, linked connections, current bill, bill history, and shortcuts. The broadband-usage slot stays empty until Airtel's portal exposes real figures again.
 
-## Important privacy rule
+## Privacy rule (hard)
 
-The repository is public so GitHub Pages can serve the dashboard. **Do not push raw Airtel captures, HAR files, request headers, cookies, tokens, or account responses.** Only `docs/data/usage.json`, generated from reviewed values, should be published. Keep raw captures local or share them only in the private ClickUp conversation.
+This repo is public. `docs/data/usage.json` is published with masked identifiers (mobile, email, account numbers). **Never push raw captures, HAR files, headers, cookies, tokens, or unmasked account data.** The importer masks before writing; verify with `git diff` anyway.
 
-## Publish routine
+## Realtime: the live overlay
 
-1. On a logged-in Airtel page, run the owner-approved capture/check snippet.
-2. Save the resulting JSON privately.
-3. From the repo root, run `python3 scripts/import_capture.py <capture.json>`.
-4. Review the reported changes and `git diff -- docs/data/usage.json` before staging.
-5. Stage only `docs/data/usage.json` and/or approved source files, commit, push, and verify the Pages deployment.
+`tools-airtel-live.js` is the live version. Copy it, paste into the browser console on a logged-in airtel.in tab, navigate normally, click **Build / refresh**. It aggregates the session's own Airtel responses and probes the usage endpoint live, masking everything on screen. Nothing is stored or uploaded; closing the tab ends it. "Copy sanitized JSON" gives a masked export you can feed to the importer.
 
-## Current evidence state
+## Static publish routine
 
-The current Airtel web portal exposes plan/bill/account details and defines a broadband usage widget, but the AirFiber page did not return consumed/remaining GB during 24 September captures. The dashboard therefore displays those available details and reserves the usage slot for real old-portal figures when they reappear.
+`python3 scripts/import_capture.py <capture.json>`, review the diff, stage only intended files, commit, push.

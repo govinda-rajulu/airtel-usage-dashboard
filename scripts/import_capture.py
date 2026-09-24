@@ -12,6 +12,15 @@ if not source.is_file() or source.suffix.lower()!='.json':
     raise SystemExit('Refusing: input must be one existing JSON capture')
 data=json.loads(source.read_text())
 current=json.loads(target.read_text())
+def mask_all(x):
+    if isinstance(x,dict):return {k:mask_all(v) for k,v in x.items()}
+    if isinstance(x,list):return [mask_all(v) for v in x]
+    if isinstance(x,str):
+        import re
+        x=re.sub(r'(\d{2})\d{4,}(\d{2})',r'\1***\2',x)
+        x=re.sub(r'(^[^@\s]{3})[^@\s]*(@.*)',r'\1***\2',x)
+    return x
+data=mask_all(data)
 page=str(data.get('pageText') or data.get('text') or '')
 if not page and not data.get('responses'):
     raise SystemExit('Refusing: capture has neither page text nor responses')
