@@ -2,82 +2,78 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>My Broadband Meter</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;600;800&display=swap">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airtel Account Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="wrap">
-<header class="top">
-<div class="brand"><span class="led"></span>My Broadband Meter</div>
-<div id="lastFetched" class="muted">loading…</div>
-</header>
+<main class="shell">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Private account summary</p>
+      <h1 id="title">Airtel Account Dashboard</h1>
+      <p class="sub" id="source"></p>
+    </div>
+    <div class="stamp"><span>Last import</span><strong id="generated"></strong></div>
+  </section>
 
-<section class="hero">
-<div class="dialbox">
-<svg id="dial" viewBox="0 0 200 120" width="320" height="192" role="img" aria-label="Data used this cycle">
-<path class="track" d="M20 110 A 90 90 0 0 1 180 110" fill="none"/>
-<path id="arc" class="arc" d="M20 110 A 90 90 0 0 1 180 110" fill="none"/>
-</svg>
-<div class="bignum"><span id="usedNow">–</span><small id="unitNow">GB</small></div>
-<div class="muted small">used this cycle</div>
-</div>
-<div class="side">
-<div class="stat"><label>Remaining</label><b id="remainNow">–</b></div>
-<div class="stat"><label>Total quota</label><b id="totalNow">–</b></div>
-<div class="stat"><label>Cycle</label><b id="cycleNow">–</b></div>
-<div class="stat"><label>Pace</label><b id="paceNow" class="">–</b></div>
-</div>
-</section>
+  <section class="usage-panel">
+    <div class="dial" id="dial"><span id="dialValue">—</span></div>
+    <div>
+      <p class="eyebrow">Broadband usage</p>
+      <h2 id="usageHeadline">Not exposed by current web portal</h2>
+      <p id="usageMessage"></p>
+      <div class="meters">
+        <div><span>Used</span><strong id="used">—</strong></div>
+        <div><span>Total</span><strong id="total">—</strong></div>
+        <div><span>Remaining</span><strong id="remaining">—</strong></div>
+        <div><span>Days left</span><strong id="days">—</strong></div>
+      </div>
+      <div class="bar"><span id="barFill"></span></div>
+    </div>
+  </section>
 
-<section class="panels">
-<div class="panel">
-<h2>Daily burn</h2>
-<canvas id="dailyChart" width="640" height="220"></canvas>
-<div class="muted small" id="dailyNote"></div>
-</div>
-<div class="panel">
-<h2>Month history</h2>
-<table id="monthTable">
-<thead><tr><th>Cycle</th><th>Used</th><th>Quota</th><th>%</th></tr></thead>
-<tbody></tbody>
-</table>
-</div>
-</section>
+  <section class="grid two">
+    <article class="card">
+      <p class="eyebrow">Plan</p>
+      <h2 id="planName"></h2>
+      <dl class="facts" id="planFacts"></dl>
+    </article>
+    <article class="card">
+      <p class="eyebrow">Current bill</p>
+      <h2 id="billAmount"></h2>
+      <dl class="facts" id="billFacts"></dl>
+    </article>
+  </section>
 
-<section class="panels">
-<div class="panel">
-<h2>Plan &amp; account</h2>
-<table id="planTable"><tbody></tbody></table>
-</div>
-<div class="panel">
-<h2>Bills</h2>
-<table id="billTable"><tbody></tbody></table>
-</div>
-</section>
+  <section class="card">
+    <p class="eyebrow">Connections</p>
+    <div class="table-wrap"><table id="connections"><thead><tr><th>Service</th><th>Identifier</th><th>Plan / line</th><th>Speed / data</th><th>Usage state</th></tr></thead><tbody></tbody></table></div>
+  </section>
 
-<section class="panels">
-<div class="panel">
-<h2>Linked services</h2>
-<table id="serviceTable"><tbody></tbody></table>
-</div>
-<div class="panel">
-<h2>Raw capture</h2>
-<p class="muted small">Every JSON response the site loaded during your last session, unfiltered.</p>
-<p><a class="btn" href="data/last_raw.json" target="_blank" rel="noopener">Open raw JSON</a></p>
-</div>
-</section>
+  <section class="grid two">
+    <article class="card">
+      <p class="eyebrow">Bill history</p>
+      <div class="history" id="history"></div>
+    </article>
+    <article class="card">
+      <p class="eyebrow">Profile & receiver</p>
+      <dl class="facts" id="profileFacts"></dl>
+    </article>
+  </section>
 
-<section class="log">
-<h2>Fetch log</h2>
-<ul id="fetchLog"></ul>
-</section>
+  <section class="grid two">
+    <article class="card">
+      <p class="eyebrow">Portal shortcuts</p>
+      <div class="chips" id="shortcuts"></div>
+    </article>
+    <article class="card">
+      <p class="eyebrow">Fetch log</p>
+      <div class="log" id="fetchLog"></div>
+    </article>
+  </section>
 
-<footer class="foot muted small">
-Data comes only from <code>data/usage.json</code> in this site. If the provider layout changes, the collector stops and the last good numbers stay on screen.
-</footer>
+  <footer><a href="data/usage.json">Raw imported data</a><span>Keep real account captures out of the public repo.</span></footer>
 </main>
 <script src="app.js"></script>
 </body>

@@ -1,176 +1,70 @@
 {
-  "fetchedAt": "2026-09-24T05:40:00+00:00",
-  "current": {
-    "usedGB": 412.7,
-    "totalGB": 1024.0,
-    "remainingGB": 611.3,
-    "unit": "GB",
-    "cycleLabel": "1-30 Sep 2026",
-    "daysTotal": 30,
-    "daysElapsed": 24,
-    "source": "sample"
+  "meta": {
+    "title": "Airtel Account Dashboard",
+    "owner": "Govindarajulu",
+    "generatedAt": "2026-09-24T18:00:00+05:30",
+    "source": "Owner-captured Airtel portal pages and responses on 24 September 2026",
+    "usageStatus": "Web portal currently returns no broadband usage figures. The usage slot is reserved for the old portal when it returns real used/remaining GB."
   },
-  "daily": [
+  "plan": {
+    "name": "Airtel Black",
+    "accountId": "10101028725242",
+    "status": "Active",
+    "price": "₹611 / month",
+    "billMode": "E-bill",
+    "billReceiver": "Govindarajulu K"
+  },
+  "connections": [
     {
-      "date": "2026-09-01",
-      "used": 14.2
+      "service": "Wi-Fi / AirFiber",
+      "identifier": "042226899928_wifi",
+      "accountNumber": "20033850986",
+      "line": "DSL",
+      "plan": "₹599 Plan",
+      "speed": "30 Mbps",
+      "data": "Unlimited (portal label)",
+      "usageStatus": "No usage figures exposed on current web portal"
     },
     {
-      "date": "2026-09-02",
-      "used": 11.8
-    },
-    {
-      "date": "2026-09-03",
-      "used": 16.5
-    },
-    {
-      "date": "2026-09-04",
-      "used": 9.4
-    },
-    {
-      "date": "2026-09-05",
-      "used": 12.7
-    },
-    {
-      "date": "2026-09-06",
-      "used": 21.3
-    },
-    {
-      "date": "2026-09-07",
-      "used": 18.9
-    },
-    {
-      "date": "2026-09-08",
-      "used": 13.6
-    },
-    {
-      "date": "2026-09-09",
-      "used": 15.1
-    },
-    {
-      "date": "2026-09-10",
-      "used": 10.8
-    },
-    {
-      "date": "2026-09-11",
-      "used": 17.4
-    },
-    {
-      "date": "2026-09-12",
-      "used": 12.2
-    },
-    {
-      "date": "2026-09-13",
-      "used": 14.9
-    },
-    {
-      "date": "2026-09-14",
-      "used": 19.6
-    },
-    {
-      "date": "2026-09-15",
-      "used": 22.1
-    },
-    {
-      "date": "2026-09-16",
-      "used": 11.3
-    },
-    {
-      "date": "2026-09-17",
-      "used": 13.8
-    },
-    {
-      "date": "2026-09-18",
-      "used": 16.7
-    },
-    {
-      "date": "2026-09-19",
-      "used": 15.4
-    },
-    {
-      "date": "2026-09-20",
-      "used": 12.9
-    },
-    {
-      "date": "2026-09-21",
-      "used": 18.2
-    },
-    {
-      "date": "2026-09-22",
-      "used": 14.6
-    },
-    {
-      "date": "2026-09-23",
-      "used": 11.9
-    },
-    {
-      "date": "2026-09-24",
-      "used": 21.4
-    },
-    {
-      "date": "2026-09-25",
-      "used": 16.1
+      "service": "DTH",
+      "identifier": "3070907513-001",
+      "line": "DTH",
+      "usageStatus": "Usage endpoint currently returns no usage figures on web"
     }
   ],
-  "history": [
-    {
-      "cycleLabel": "1-30 Sep 2026",
-      "usedGB": 412.7,
-      "totalGB": 1024.0
-    },
-    {
-      "cycleLabel": "1-31 Aug 2026",
-      "usedGB": 736.2,
-      "totalGB": 1024.0
-    },
-    {
-      "cycleLabel": "1-31 Jul 2026",
-      "usedGB": 689.0,
-      "totalGB": 1024.0
-    }
+  "current": {
+    "cycle": "11 Aug 2026 - 10 Sep 2026",
+    "usedGB": null,
+    "totalGB": null,
+    "remainingGB": null,
+    "daysLeft": null,
+    "message": "Usage not available from the current web portal"
+  },
+  "billing": {
+    "amount": "₹720.98",
+    "payable": "₹0.00",
+    "status": "PAID",
+    "generatedOn": "12 Sep 2026",
+    "dueDate": "22 Sep 2026",
+    "history": [
+      { "month": "Sep 2026", "amount": "₹720.98" },
+      { "month": "Aug 2026", "amount": "₹737.97" },
+      { "month": "Jul 2026", "amount": "₹725.70" },
+      { "month": "Jun 2026", "amount": "₹722.13" }
+    ]
+  },
+  "profile": {
+    "primaryMobile": "9043309052",
+    "emailForEBill": "govindarajulu13597@gmail.com"
+  },
+  "shortcuts": [
+    "View bills", "Pay bills", "Wi-Fi settings", "Manage Netflix", "Modify plan", "Update mobile number", "Shift connection", "E-bill", "Safe custody", "Change email address", "Add-on devices"
   ],
   "fetchLog": [
     {
-      "at": "2026-09-24T05:40:00+00:00",
-      "status": "ok",
-      "note": "sample data; replace with a real run"
+      "at": "2026-09-24T18:00:00+05:30",
+      "result": "Portal page and response capture",
+      "detail": "Plan, bill, account and linked-connection details imported; current web portal did not expose broadband usage figures. Portal config defines broadband usage support, but the AirFiber page did not load a usage response during capture."
     }
-  ],
-  "plan": [
-    {
-      "section": "account",
-      "field": "planName",
-      "value": "Airtel Black 1099 (sample)"
-    },
-    {
-      "section": "account",
-      "field": "planType",
-      "value": "Fiber 100 Mbps (sample)"
-    }
-  ],
-  "bills": [
-    {
-      "section": "bills",
-      "field": "billAmount",
-      "value": "1297.00 (sample)"
-    },
-    {
-      "section": "bills",
-      "field": "dueDate",
-      "value": "2026-10-05 (sample)"
-    }
-  ],
-  "services": [
-    {
-      "section": "services",
-      "field": "broadbandId",
-      "value": "0xxxxxxxxx_blr (sample)"
-    },
-    {
-      "section": "services",
-      "field": "serviceType",
-      "value": "Xstream Fiber (sample)"
-    }
-  ],
-  "responsesCaptured": 14
+  ]
 }
