@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>My Broadband Meter</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+<div class="brand"><span class="led"></span>My Broadband Meter</div>
+<div id="lastFetched" class="muted">loading…</div>
+</header>
+
+<section class="hero">
+<div class="dialbox">
+<svg id="dial" viewBox="0 0 200 120" width="320" height="192" role="img" aria-label="Data used this cycle">
+<path class="track" d="M20 110 A 90 90 0 0 1 180 110" fill="none"/>
+<path id="arc" class="arc" d="M20 110 A 90 90 0 0 1 180 110" fill="none"/>
+</svg>
+<div class="bignum"><span id="usedNow">–</span><small id="unitNow">GB</small></div>
+<div class="muted small">used this cycle</div>
+</div>
+<div class="side">
+<div class="stat"><label>Remaining</label><b id="remainNow">–</b></div>
+<div class="stat"><label>Total quota</label><b id="totalNow">–</b></div>
+<div class="stat"><label>Cycle</label><b id="cycleNow">–</b></div>
+<div class="stat"><label>Pace</label><b id="paceNow" class="">–</b></div>
+</div>
+</section>
+
+<section class="panels">
+<div class="panel">
+<h2>Daily burn</h2>
+<canvas id="dailyChart" width="640" height="220"></canvas>
+<div class="muted small" id="dailyNote"></div>
+</div>
+<div class="panel">
+<h2>Month history</h2>
+<table id="monthTable">
+<thead><tr><th>Cycle</th><th>Used</th><th>Quota</th><th>%</th></tr></thead>
+<tbody></tbody>
+</table>
+</div>
+</section>
+
+<section class="panels">
+<div class="panel">
+<h2>Plan &amp; account</h2>
+<table id="planTable"><tbody></tbody></table>
+</div>
+<div class="panel">
+<h2>Bills</h2>
+<table id="billTable"><tbody></tbody></table>
+</div>
+</section>
+
+<section class="panels">
+<div class="panel">
+<h2>Linked services</h2>
+<table id="serviceTable"><tbody></tbody></table>
+</div>
+<div class="panel">
+<h2>Raw capture</h2>
+<p class="muted small">Every JSON response the site loaded during your last session, unfiltered.</p>
+<p><a class="btn" href="data/last_raw.json" target="_blank" rel="noopener">Open raw JSON</a></p>
+</div>
+</section>
+
+<section class="log">
+<h2>Fetch log</h2>
+<ul id="fetchLog"></ul>
+</section>
+
+<footer class="foot muted small">
+Data comes only from <code>data/usage.json</code> in this site. If the provider layout changes, the collector stops and the last good numbers stay on screen.
+</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

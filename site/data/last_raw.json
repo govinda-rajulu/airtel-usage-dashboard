@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-09-24T05:40:00+00:00",
+  "responses": [
+    {
+      "url": "sample://no-capture-yet",
+      "json": {
+        "note": "Run scripts/collect.py to fill this with your real session data."
+      }
+    }
+  ]
+}

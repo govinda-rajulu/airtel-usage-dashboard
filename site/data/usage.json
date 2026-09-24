@@ -1,0 +1,176 @@
+{
+  "fetchedAt": "2026-09-24T05:40:00+00:00",
+  "current": {
+    "usedGB": 412.7,
+    "totalGB": 1024.0,
+    "remainingGB": 611.3,
+    "unit": "GB",
+    "cycleLabel": "1-30 Sep 2026",
+    "daysTotal": 30,
+    "daysElapsed": 24,
+    "source": "sample"
+  },
+  "daily": [
+    {
+      "date": "2026-09-01",
+      "used": 14.2
+    },
+    {
+      "date": "2026-09-02",
+      "used": 11.8
+    },
+    {
+      "date": "2026-09-03",
+      "used": 16.5
+    },
+    {
+      "date": "2026-09-04",
+      "used": 9.4
+    },
+    {
+      "date": "2026-09-05",
+      "used": 12.7
+    },
+    {
+      "date": "2026-09-06",
+      "used": 21.3
+    },
+    {
+      "date": "2026-09-07",
+      "used": 18.9
+    },
+    {
+      "date": "2026-09-08",
+      "used": 13.6
+    },
+    {
+      "date": "2026-09-09",
+      "used": 15.1
+    },
+    {
+      "date": "2026-09-10",
+      "used": 10.8
+    },
+    {
+      "date": "2026-09-11",
+      "used": 17.4
+    },
+    {
+      "date": "2026-09-12",
+      "used": 12.2
+    },
+    {
+      "date": "2026-09-13",
+      "used": 14.9
+    },
+    {
+      "date": "2026-09-14",
+      "used": 19.6
+    },
+    {
+      "date": "2026-09-15",
+      "used": 22.1
+    },
+    {
+      "date": "2026-09-16",
+      "used": 11.3
+    },
+    {
+      "date": "2026-09-17",
+      "used": 13.8
+    },
+    {
+      "date": "2026-09-18",
+      "used": 16.7
+    },
+    {
+      "date": "2026-09-19",
+      "used": 15.4
+    },
+    {
+      "date": "2026-09-20",
+      "used": 12.9
+    },
+    {
+      "date": "2026-09-21",
+      "used": 18.2
+    },
+    {
+      "date": "2026-09-22",
+      "used": 14.6
+    },
+    {
+      "date": "2026-09-23",
+      "used": 11.9
+    },
+    {
+      "date": "2026-09-24",
+      "used": 21.4
+    },
+    {
+      "date": "2026-09-25",
+      "used": 16.1
+    }
+  ],
+  "history": [
+    {
+      "cycleLabel": "1-30 Sep 2026",
+      "usedGB": 412.7,
+      "totalGB": 1024.0
+    },
+    {
+      "cycleLabel": "1-31 Aug 2026",
+      "usedGB": 736.2,
+      "totalGB": 1024.0
+    },
+    {
+      "cycleLabel": "1-31 Jul 2026",
+      "usedGB": 689.0,
+      "totalGB": 1024.0
+    }
+  ],
+  "fetchLog": [
+    {
+      "at": "2026-09-24T05:40:00+00:00",
+      "status": "ok",
+      "note": "sample data; replace with a real run"
+    }
+  ],
+  "plan": [
+    {
+      "section": "account",
+      "field": "planName",
+      "value": "Airtel Black 1099 (sample)"
+    },
+    {
+      "section": "account",
+      "field": "planType",
+      "value": "Fiber 100 Mbps (sample)"
+    }
+  ],
+  "bills": [
+    {
+      "section": "bills",
+      "field": "billAmount",
+      "value": "1297.00 (sample)"
+    },
+    {
+      "section": "bills",
+      "field": "dueDate",
+      "value": "2026-10-05 (sample)"
+    }
+  ],
+  "services": [
+    {
+      "section": "services",
+      "field": "broadbandId",
+      "value": "0xxxxxxxxx_blr (sample)"
+    },
+    {
+      "section": "services",
+      "field": "serviceType",
+      "value": "Xstream Fiber (sample)"
+    }
+  ],
+  "responsesCaptured": 14
+}
