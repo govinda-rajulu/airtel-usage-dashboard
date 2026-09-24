@@ -23,8 +23,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-USAGE_OUT = ROOT / "site" / "data" / "usage.json"
-RAW_OUT = ROOT / "site" / "data" / "last_raw.json"
+USAGE_OUT = ROOT / "docs" / "data" / "usage.json"
+RAW_OUT = ROOT / "docs" / "data" / "last_raw.json"
 
 BASE = "https://www.airtel.in"
 LOGIN_URL = BASE + "/s/selfcare"
